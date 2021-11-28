@@ -1,0 +1,59 @@
+.navbar{
+    top: 0;
+    flex: 0.2;
+    justify-content: center;
+    height: 100px;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.navbar2{
+    margin-top: 63vh;
+    flex: 0.2;
+    justify-content: center;
+    height: 100px;
+    background-color: white;
+  
+}
+
+.navbar__options-box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   display: inline-block;
+    padding: 10px;
+    border: solid 1px black;
+    background-color: white;
+   
+}
+
+.navbar__item{
+    margin: 10px;
+    
+}
+
+.navbar__avatar{
+    position: relative;
+    width: 100%;
+    border: black 4px solid;
+    
+}
+
+.porfile{
+    text-align: center;
+}
+
+.porfile__items{
+    font-weight: 500;
+}
+
+.sticky{
+    top: 10vh;
+   position: sticky;
+    transition: ease 2s;
+    border-bottom: 1px solid black;
+    box-shadow: 0.5px 0.5px 13px 0.5px rgba(0, 0, 0, 0.329);
+    background-color: white;
+}
+
+.navIn{
+    display: inline-block;
+}
