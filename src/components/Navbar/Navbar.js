@@ -1,5 +1,5 @@
 import React from "react";
-import { useDataLayerValue } from "../ContextApi/DataLayer";
+import {useDataLayerValue} from '../././../ContextApi/DataLayer';
 
 function Navbar() {
   const [{ user }, dispatch] = useDataLayerValue();

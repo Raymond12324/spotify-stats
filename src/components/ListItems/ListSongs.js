@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Song from "./Song";
+import Song from "../SongItem/Song";
 import Grid from "@material-ui/core/Grid";
-import { useDataLayerValue } from "../ContextApi/DataLayer";
+import {useDataLayerValue} from '../././../ContextApi/DataLayer';
 function ListSongs() {
   const [{ topArtistsMedium,topArtistsLong }, dispatch] = useDataLayerValue();
   const [isLoaded, setLoader] = useState(false);
