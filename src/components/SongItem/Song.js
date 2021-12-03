@@ -123,7 +123,7 @@ export default function RecipeReviewCard(props) {
     <hr />
 
    <span class="text-sm block"> {props.genres[0]}</span>
-  <span> {props.followers}</span>
+ 
   </div>
 </div>
 
