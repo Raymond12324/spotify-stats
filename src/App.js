@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Body from './components/Body'
-import "./components/Navbar.css";
+import Navbar from "./components/Navbar/Navbar";
+import Body from './components/Body/Body'
+import "./components/Navbar/Navbar.css";
 import SpotifyWebApi from "spotify-web-api-js";
 import { loginUrl, getTokenFromUrl } from "./Api/spotify";
 import { useDataLayerValue } from "./ContextApi/DataLayer";
@@ -84,12 +84,12 @@ function App() {
       {token ? (
         <div className="body__app">
           <Body/>
-          <Navbar />
+          {/* <Navbar /> */}
          
        
           </div>
       ) : (
-        <a href={loginUrl}>Entrar</a>
+        <a class="button-main" href={loginUrl}>Entrar</a>
       )}
       
     </div>
