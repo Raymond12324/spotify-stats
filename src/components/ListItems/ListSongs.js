@@ -9,15 +9,15 @@ function ListSongs() {
   //bregando aqui
 
   return (
-    <Grid container spacing={3}>
+    <div class="grid grid-cols-3 gap-4">
       {topArtistsMedium?.items?.map((item, i) => {
         return (
-          <Grid item xs={12} sm={4}>
+          <div>
             <Song name={item?.name} image={item?.images[0]?.url} type={item?.type} id={i} genres={item?.genres} followers={item?.followers?.total} popularity={item?.popularity}/>
-          </Grid>
+          </div>
         );
       })}
-    </Grid>
+    </div>
   );
 }
 

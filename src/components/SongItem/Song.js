@@ -51,62 +51,81 @@ export default function RecipeReviewCard(props) {
   };
 
   return (
-    <Card class="shadow-lg" className={classes.root}>
+    // <Card class="shadow-lg" className={classes.root}>
       
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar} backgroundColor='black'>
-            {props.id+1}
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={props.name}
-        subheader={props.type}
-      />
-      <CardMedia
-        className={classes.media}
-        image={props.image}
-        title={props.name}
-      />
-        {/* <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton> */}
-        <span class="expand-item" onClick={handleExpandClick}>More</span>
+    //   <CardHeader
+    //     avatar={
+    //       <Avatar aria-label="recipe" className={classes.avatar} backgroundColor='black'>
+    //         {props.id+1}
+    //       </Avatar>
+    //     }
+    //     action={
+    //       <IconButton aria-label="settings">
+    //         <MoreVertIcon />
+    //       </IconButton>
+    //     }
+    //     title={props.name}
+    //     subheader={props.type}
+    //   />
+    //   <CardMedia
+    //     className={classes.media}
+    //     image={props.image}
+    //     title={props.name}
+    //   />
+    //     {/* <IconButton
+    //       className={clsx(classes.expand, {
+    //         [classes.expandOpen]: expanded,
+    //       })}
+    //       onClick={handleExpandClick}
+    //       aria-expanded={expanded}
+    //       aria-label="show more"
+    //     >
+    //       <ExpandMoreIcon />
+    //     </IconButton> */}
+    //     <span class="expand-item" onClick={handleExpandClick}>More</span>
+        
       
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <h3>Popularity: </h3> <p>{props.popularity}</p> 
-          <hr/>
-          <h3>Followers: </h3> <p> {props.followers}</p>
+    //   <Collapse in={expanded} timeout="auto" unmountOnExit>
+    //     <CardContent>
+    //       <h3>Popularity: </h3> <p>{props.popularity}</p> 
+    //       <hr/>
+    //       <h3>Followers: </h3> <p> {props.followers}</p>
     
-          <Typography paragraph>
-            <hr/>
-            <h3>Genres</h3>
-            {
-              props.genres.map((item,i) => {
-                return(
-                  <>
-                   <hr/>
-                  <h5>{item}</h5>
-                  </>
-                )
-              })
-            }
-          </Typography>
+    //       <Typography paragraph>
+    //         <hr/>
+    //         <h3>Genres</h3>
+    //         {
+    //           props.genres.map((item,i) => {
+    //             return(
+    //               <>
+    //                <hr/>
+    //               <h5>{item}</h5>
+    //               </>
+    //             )
+    //           })
+    //         }
+    //       </Typography>
          
-        </CardContent>
-      </Collapse>
-    </Card>
+    //     </CardContent>
+    //   </Collapse>
+    // </Card>
+
+<div class="bg-white shadow-lg flex p-3 rounded w-15 max-w-sm border border-gray-300">
+  <div class="w-screen">
+    <img
+      class="rounded-sm w-32 h-32"
+      src={props.image}
+      alt=""
+    />
+  </div>
+  <div class="font-bold pl-5 w-screen text-md">
+    <span class="text-2xl">{props.name}</span>
+    <hr />
+
+   <span class="text-sm block"> {props.genres[0]}</span>
+  <span> {props.followers}</span>
+  </div>
+</div>
+
   );
 }
