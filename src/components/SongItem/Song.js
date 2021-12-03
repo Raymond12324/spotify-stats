@@ -109,23 +109,26 @@ export default function RecipeReviewCard(props) {
     //     </CardContent>
     //   </Collapse>
     // </Card>
-
-<div class="bg-white shadow-lg flex p-3 rounded w-15 max-w-sm border border-gray-300">
+<a href={`https://open.spotify.com/artist/${props.name}`} target='_blank' className='no-underline hover:text-green-300'>
+<div    class="bg-white-100 shadow-sm flex p-3 rounded w-15 max-w-sm border border-gray-700 hover:bg-gray-800 cursor-pointer ">
   <div class="w-screen">
+
     <img
-      class="rounded-sm w-32 h-32"
+      class="rounded-sm w-32 h-32 border-2"
       src={props.image}
       alt=""
     />
   </div>
   <div class="font-bold pl-5 w-screen text-md">
-    <span class="text-2xl">{props.name}</span>
+ <span class="text-2x1 text-green-300">{props.id+1}</span> <span class="text-2xl">{props.name}</span>
     <hr />
 
-   <span class="text-sm block"> {props.genres[0]}</span>
- 
+   <span class="text-sm block font-mediun"> {props.genres[0]}</span>
+   <span class="text-sm block"> {props.genres[1]}</span>
+   <span class="text-sm block"> {props.genres[2]}</span>
+   <span class="text-sm block"> {props.genres[3]}</span>
   </div>
 </div>
-
+</a>
   );
 }

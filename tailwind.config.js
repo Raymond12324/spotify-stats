@@ -7,5 +7,9 @@ module.exports = {
   variants: {
     extend: {},
   },
+  corePlugins: {
+    // ...
+   textDecoration: false,
+  },
   plugins: [],
 }

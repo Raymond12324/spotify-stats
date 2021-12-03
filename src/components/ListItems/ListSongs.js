@@ -9,7 +9,7 @@ function ListSongs() {
   //bregando aqui
 
   return (
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-3 gap-4 p-5">
       {topArtistsMedium?.items?.map((item, i) => {
         return (
           <div>
