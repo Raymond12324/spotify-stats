@@ -1,4 +1,5 @@
 import React from 'react';
+import './Song.css'
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -50,7 +51,7 @@ export default function RecipeReviewCard(props) {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card class="shadow-lg" className={classes.root}>
       
       <CardHeader
         avatar={
@@ -71,7 +72,7 @@ export default function RecipeReviewCard(props) {
         image={props.image}
         title={props.name}
       />
-        <IconButton
+        {/* <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })}
@@ -80,8 +81,8 @@ export default function RecipeReviewCard(props) {
           aria-label="show more"
         >
           <ExpandMoreIcon />
-        </IconButton>
-    
+        </IconButton> */}
+        <span class="expand-item" onClick={handleExpandClick}>More</span>
       
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

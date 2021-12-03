@@ -17,7 +17,7 @@ function Body() {
     return (
         
         <div className="main__body">
-            <h1>Spotify App</h1>
+            <h1></h1>
             <br/>
             <hr/>
             <Router>

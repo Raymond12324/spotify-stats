@@ -2,9 +2,32 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 
 }
+
 .body__app{
-  display: flex;
-  padding: 1%;
+  /* display: flex;
+  */
+  padding: 1%; 
+ 
+  
+}
+a:link{
+  text-decoration: none;
+}
+
+.button-main{
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  top: 10%;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+  background-color: #1DB954;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+  width: 30%;
 }
