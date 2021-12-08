@@ -17,33 +17,10 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-  
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    textAlign:'center',
-    transform: 'rotate(0deg)',
-    marginLeft: '20vh',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: 'black',
-  },
-}));
+
 
 export default function RecipeReviewCard(props) {
-  const classes = useStyles();
+
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -51,7 +28,7 @@ export default function RecipeReviewCard(props) {
   };
 
   return (
-    // <Card class="shadow-lg" className={classes.root}>
+    // <Card className="shadow-lg" className={classes.root}>
       
     //   <CardHeader
     //     avatar={
@@ -82,7 +59,7 @@ export default function RecipeReviewCard(props) {
     //     >
     //       <ExpandMoreIcon />
     //     </IconButton> */}
-    //     <span class="expand-item" onClick={handleExpandClick}>More</span>
+    //     <span className="expand-item" onClick={handleExpandClick}>More</span>
         
       
     //   <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -110,23 +87,23 @@ export default function RecipeReviewCard(props) {
     //   </Collapse>
     // </Card>
 <a href={`https://open.spotify.com/artist/${props.name}`} target='_blank' className='no-underline hover:text-green-300'>
-<div    class="bg-white-100 shadow-sm flex p-3 rounded w-15 max-w-sm border border-gray-700 hover:bg-gray-800 cursor-pointer ">
-  <div class="w-screen">
+<div    className="bg-white-100 shadow-sm flex p-3 rounded w-15 max-w-sm border border-gray-700 hover:bg-gray-800 cursor-pointer ">
+  <div className="w-screen">
 
     <img
-      class="rounded-sm w-32 h-32 border-2"
+      className="rounded-sm w-32 h-32 border-2"
       src={props.image}
       alt=""
     />
   </div>
-  <div class="font-bold pl-5 w-screen text-md">
- <span class="text-2x1 text-green-300">{props.id+1}</span> <span class="text-2xl">{props.name}</span>
+  <div className="font-bold pl-5 w-screen text-md">
+ <span className="text-2x1 text-green-300">{props.id+1}</span> <span className="text-2xl">{props.name}</span>
     <hr />
 
-   <span class="text-sm block font-mediun"> {props.genres[0]}</span>
-   <span class="text-sm block"> {props.genres[1]}</span>
-   <span class="text-sm block"> {props.genres[2]}</span>
-   <span class="text-sm block"> {props.genres[3]}</span>
+   <span className="text-sm block font-mediun"> {props.genres[0]}</span>
+   <span className="text-sm block"> {props.genres[1]}</span>
+   <span className="text-sm block"> {props.genres[2]}</span>
+   <span className="text-sm block"> {props.genres[3]}</span>
   </div>
 </div>
 </a>

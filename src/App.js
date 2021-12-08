@@ -38,29 +38,51 @@ function App() {
       });
 
       //ALL time Top
-      spotify.getMyTopTracks({time_range:'long_term'}).then((topTracksLong) =>{
-        dispatch({
-          type:"SET_TOPT_LONG",
-          topTracksLong:topTracksLong
-        })
-      });
+      // spotify.getMyTopTracks({time_range:'long_term'}).then((topTracksLong) =>{
+      //   dispatch({
+      //     type:"SET_TOPT_LONG",
+      //     topTracksLong:topTracksLong
+      //   })
+      // });
 
-      spotify.getMyTopArtists({limit:5}).then((topArtistsLong) =>{
+      // spotify.getMyTopArtists({limit:5}).then((topArtistsLong) =>{
+      //   dispatch({
+      //     type:"SET_TOPA_LONG",
+      //     topArtistsLong:topArtistsLong
+      //   })
+      // });
+
+      // //medium term top
+      // spotify.getMyTopTracks().then((topTracksMedium) =>{
+      //   dispatch({
+      //     type:"SET_TOPTRACKS",
+      //     topTracksMedium:topTracksMedium
+      //   })
+      // });
+
+      // spotify.getMyTopArtists().then((topArtistsMedium) =>{
+      //   dispatch({
+      //     type:"SET_TOPARTIST",
+      //     topArtistsMedium:topArtistsMedium
+      //   });
+      // })
+
+      spotify.getMyTopArtists({time_range:"long_term"}).then((topArtistsLong) =>{
         dispatch({
           type:"SET_TOPA_LONG",
           topArtistsLong:topArtistsLong
         })
       });
 
-      //medium term top
-      spotify.getMyTopTracks().then((topTracksMedium) =>{
-        dispatch({
-          type:"SET_TOPTRACKS",
-          topTracksMedium:topTracksMedium
-        })
-      });
+      // //medium term top
+      // spotify.getMyTopTracks().then((topTracksMedium) =>{
+      //   dispatch({
+      //     type:"SET_TOPTRACKS",
+      //     topTracksMedium:topTracksMedium
+      //   })
+      // });
 
-      spotify.getMyTopArtists().then((topArtistsMedium) =>{
+      spotify.getMyTopArtists({time_range:"medium_term"}).then((topArtistsMedium) =>{
         dispatch({
           type:"SET_TOPARTIST",
           topArtistsMedium:topArtistsMedium
