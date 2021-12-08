@@ -2,7 +2,7 @@ export const authEndpoint = "https://accounts.spotify.com/authorize";
 
 const client_id = "eb4f9219ef0a4137abcd8cc2cf2f07fe";
 const client_secret ="90a249400fd3414689d906b8b808451e";
-const redirect_uris  ="http://localhost:3000/";
+const redirect_uris  ="https://spotify-stats-v1.web.app/";
 
 const scopes ="user-top-read";
 
