@@ -105,13 +105,13 @@ function App() {
       
       {token ? (
         <div className="body__app">
-          <Body/>
+          <Body className=""/>
           {/* <Navbar /> */}
          
        
           </div>
       ) : (
-        <a class="button-main" href={loginUrl}>Entrar</a>
+        <a className="button-main bg-green-400 pt-1 pb-1 pl-10 pr-10 rounded-lg text-lg	font-bold text-white" href={loginUrl}>Entrar</a>
       )}
       
     </div>
